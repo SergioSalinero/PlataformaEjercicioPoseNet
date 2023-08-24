@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en" >
+<head>
+	<meta charset="UTF-8">
+	<title>Sign Up - Virkning</title>
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/5.0.0/normalize.min.css">
+	<link rel="stylesheet" href="./CSS-style/userForm.css">
+
+</head>
+<body>
+
+	<form action="/signup" method="post" id="signup-form">
+      
+	<h1>Regístrate</h1>
+	
+	<fieldset>
+		<legend><span class="number">&#128512;</span>Tu información básica</legend>
+
+	        <div id="personal-data">		
+			<label for="name">Nombre:</label>
+			<input type="text" id="name" name="name" required>
+		  
+			<label for="lastname">Apellidos:</label>
+			<input type="text" id="lastname" name="lastname" required>
+			
+			<label for="nickname">Nombre de usuario:</label>
+			<input type="text" id="nickname" class="nickname" name="nickname" pattern="^[a-z0-9_]+$" required>
+		  
+		  	<div id="errorNickname" class="error"></div>
+		  
+			<label for="mail">Email:</label>
+			<input type="email" id="mail" name="email" required>
+			
+			<div id="errorEmail" class="error"></div>
+		  
+			<label for="password">Contraseña:</label>
+			<input type="password" id="password" name="password" pattern='^(?=.*[a-z])(?=.*[A-Z])(?=.*\d)[a-zA-Z\d]{8,}$' required>
+			
+			<div id="errorPassword" class="error"></div>
+			
+			<label for="password">Repetir contraseña:</label>
+			<input type="password" id="re-password" name="re-password" pattern='^(?=.*[a-z])(?=.*[A-Z])(?=.*\d)[a-zA-Z\d]{8,}$' required>
+			<div id="errorRePassword" class="error"></div>
+			
+			<label for="weight">Peso:</label>
+			<input type="number" id="weight" name="weight" value="65" min="0" required>
+		  
+			<label for="height">Altura:</label>
+			<input type="number" id="height" name="height" value="170" min="0" required>
+			
+			<p>¿Ya tienes una cuenta? <a href="/login">Iniciar sesión</a> </p>
+			
+			<button type="submit" id="signup-button">Registrarse</button>
+					       
+	        </div>
+        
+	</fieldset> 
+	</form>
+
+	<!-- SIGNUP.JS script. Custom signup page -->
+	<script type="module" src="/scripts/signup.js"></script>
+
+</body>
+</html>
+

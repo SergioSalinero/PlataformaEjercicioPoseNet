@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8" />
+	<title>Salas de entrenamiento - Virkning</title>
+	<link rel="stylesheet" href="./CSS-style/trainingRooms.css">
+</head>
+<body>
+    
+ 	<p id="id" hidden><%= id %></p>
+    
+	<nav id="top">
+		<a id="back">←</a>
+		<div id="search-container">
+			<input id="input" placeholder="Buscar..."></input>
+			<a id="search">🔍</a>
+		</div>
+		<a id="options">☰</a>
+	</nav>
+	
+	<div id="toggle-div">
+		<a id="create-tr"><span class="white-filter">➕️</span>&nbsp;Crear una sala</a>
+		<hr id="hr"></hr>
+		<a id="most-popular">⭐️&nbsp;Mejor valoradas</a>
+		<a id="most-viewed">👁️&nbsp;Más vistas</a>
+		<a id="recently-added">⌚️&nbsp;Más reciente</a>
+		<a id="older">⌛️&nbsp;Más antiguo</a>
+	</div>
+		
+	<div id="grid-container" class="grid-container">
+	</div>
+	
+	<script type="module" src="/scripts/trainingRooms.js"></script>
+    
+</body>
+</html>
+

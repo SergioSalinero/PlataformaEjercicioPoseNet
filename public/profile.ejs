@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en" >
+<head>
+	<meta charset="UTF-8">
+	<title>Perfil - Virkning</title>
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/5.0.0/normalize.min.css">
+	<link rel="stylesheet" href="./CSS-style/userForm.css">
+
+</head>
+<body>
+
+	<p id="id" hidden><%= id %></p>
+	
+	<nav id="top">
+		<a id="back">←</a>
+		<p id="title">Perfil</p>
+		<a></a>
+	</nav>
+
+	<form action="/profile" method="post" id="form">
+      
+      	<div id="profile">
+        
+	<fieldset>
+		<legend>
+			<span class="number">📒</span>
+			Información personal
+			
+		</legend>
+		<label id="name"><strong>Nombre:</strong></label>
+          	<label id="lastname"><strong>Apellidos:</strong></label>
+          	<label id="username"><strong>Nombre de usuario:</strong></label>
+          	<label id="email"><strong>Email:</strong></label>
+          	<label id="weight"><strong>Peso:</strong></label>
+          	<label id="height"><strong>Altura:</strong></label>
+		
+		<div>&nbsp;<br>&nbsp;</div>
+		
+		<a id="edit-password"  href="/password_recovery">Modificar contraseña</a>
+		<div>&nbsp;<br>&nbsp;</div>
+		<a id="edit">Editar 📝</a>
+		<div>&nbsp;<br>&nbsp;</div><div>&nbsp;<br>&nbsp;</div>
+		<a id="remove-account">Eliminar cuenta</a>
+		
+	</fieldset> 
+	</div>       
+	
+	<div id="save-form" hidden>
+      
+	<h1>Editar perfil</h1>
+        
+	<fieldset id="edit-profile">
+		<legend><span class="number">📒</span>Tu información básica</legend>
+		<label for="name">Nombre:</label>
+		<input type="text" id="nameI" name="name" required>
+          
+		<label for="lastname">Apellidos:</label>
+		<input type="text" id="lastnameI" name="lastname" required>
+		
+		<label for="mail">Email:</label>
+		<input type="email" id="mailI" name="email" required>
+	
+		<div id="error" class="error"></div>	
+			
+		<label for="weight">Peso:</label>
+		<input type="number" id="weightI" name="weight" min="0" required>
+		
+		<label for="height">Altura:</label>
+		<input type="number" id="heightI" name="height" min="0" required>
+		
+		<input id="userID" name="userID" hidden></input>
+          				
+	</fieldset>        
+        
+	<button type="submit" id="save-button">Guardar</button>
+        
+        </div>
+	</form>
+	
+	<!-- SIGNUP.JS script. Custom signup page -->
+	<script type="module" src="/scripts/profile.js"></script>
+
+</body>
+</html>
+

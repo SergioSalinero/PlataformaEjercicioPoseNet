@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en" >
+<head>
+	<meta charset="UTF-8">
+	<title>Crear sala - Virkning</title>
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/5.0.0/normalize.min.css">
+	<link rel="stylesheet" href="./CSS-style/userForm.css">
+
+</head>
+<body>
+
+	<nav id="top">
+		<a id="back">←</a>
+		<p></p>
+		<a></a>
+	</nav>
+
+	<form action="/create_TR" method="post" id="form">
+      
+	<h1>Crea tu sala de entrenamiento</h1>
+	
+	<fieldset>
+	
+			<p id="id" hidden><%= id %></p>
+				
+			<label for="name-tr">Nombre de la sala:</label>
+			<input type="text" id="name-tr" name="name_tr" maxlength="30" required>
+			
+			<label for="name-tr">Descripción:</label>
+			<textarea type="text" id="summary-tr" name="summary_tr" required></textarea>
+			
+			<input id="userID" name="userID" hidden></input>
+			
+			<button type="submit" id="button">Hecho</button>
+					      			
+	</fieldset> 
+	</form>
+
+	<script>
+		const id = document.getElementById('id').innerHTML;
+		const userID = document.getElementById('userID');
+		userID.value = id;
+		
+		const back = document.getElementById('back');
+		back.href= '/training_rooms?id=' + id;
+	</script>
+
+</body>
+</html>
+

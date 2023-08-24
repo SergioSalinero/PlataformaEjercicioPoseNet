@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8" />
+	<title>Usuarios - Virkning</title>
+	<link rel="stylesheet" href="./CSS-style/usersManagement.css">
+</head>
+<body>
+
+	<p id="id" hidden><%= id %></p>
+	
+	<nav id="top">
+		<a id="back">←</a>
+		<p id="title">LISTA DE USUARIOS</p>
+		<a></a>
+	</nav>
+	
+	<form action="" method="POST" id="form">
+		<div>
+			<input id="rm-user-i" type="text"></input>
+			<button id="rm-user">Eliminar</button>
+		</div>
+		
+		<select id="role">
+			<option value="user">Normal</option>
+			<option value="manager">Administrador</option>
+		</select>
+		
+		<button id="ch-role">Actualizar</button>
+		
+		<p id="error"></p>
+		<p id="no-error"></p>
+	</form>
+
+	<table id="table">
+	
+		<tr>
+			<th scope="col">Apellidos</th>
+			<th scope="col">Nombre</th>
+			<th scope="col">Nombre de usuario</th>
+			<th scope="col">Email</th>
+			<th scope="col">ID</th>
+			<th scope="col">Fecha de actividad</th>
+		</tr>
+	</table>
+
+	<script type="module" src="/scripts/usersManagement.js"></script>
+	
+</body>
+</html>
+

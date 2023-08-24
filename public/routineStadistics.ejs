@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8" />
+	<title>Stadistics - Virknig</title>
+	<link rel="stylesheet" href="./CSS-style/routineStadistics.css">
+</head>
+<body>
+
+	<p id="id" hidden><%= id %></p>
+	<p id="TR" hidden><%= TR %></p>
+	
+	<nav id="top">
+		<a id="back">←</a>
+		<p>¡Rutina completada!</p>
+		<p></p>
+	</nav>
+	
+	
+        
+	<div id="grid-container" class="grid-container">
+		<div class="grid-item">
+			<p id="totalTime">TIEMPO TOTAL: </p>
+			<p id="workTime">Tiempo de trabajo: </p>
+			<p id="restTime" style="margin-top:-10px;margin-bottom:10px;">Tiempo de descanso: </p>		
+		
+			<table id="myTable" border="1">
+				<tr>
+					<th>Ejercicio</th>
+					<th>Repeticiones</th>
+					<th>Tiempo</th>
+				</tr>
+			</table>
+		
+			<p id="burned-calories">🔥&nbsp;CALORÍAS QUEMADAS&nbsp;≈ </p>
+		</div>
+		
+		<div class="grid-item">
+			<p id="evaluation-title">Valoración personal</p>
+			<a id="e-1" class="number">1</a>
+			<a id="e-2" class="number">2</a>
+			<a id="e-3" class="number">3</a>
+			<a id="e-4" class="number">4</a>
+			<a id="e-5" class="number" style="margin-bottom:15px;">5</a>
+		</div>
+	</div>
+	
+	<div class="grid-item save">
+		<form action="/routine_stadistics" method="POST" id="form">
+			<label for="name">Nombre de la rutina</label>
+			<input type="text" id="name" name="name">
+		
+			<label for="comment">Comentario</label>
+			<textarea type="text" id="comment" name="comment"></textarea>
+		
+			<input id="userID" name="userID" hidden></input>
+			<input id="TRID" name="TRID" hidden></input>
+		
+			<a id="save-routine" return false>Guardar Rutina</a>
+	   	
+		   	<p id="message"></p>      
+        
+			<button type="submit" id="back-button">Volver al inicio</button>
+		</form>
+	</div>
+	
+	<script type="module" src="/scripts/routineStadistics.js"></script>
+		
+</body>
+</html>
+

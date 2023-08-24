@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8" />
+	<title>Salas de entrenamiento - Virkning</title>
+	<link rel="stylesheet" href="./CSS-style/trainingRooms.css">
+</head>
+<body>
+    
+ 	<p id="userID" hidden><%= userID %></p>
+ 	<p id="roomID" hidden><%= roomID %></p>
+    
+	<nav id="top">
+		<a id="back">←</a>
+		<p id="room-name"></p>
+		<form method="post" id="form">
+			<a id="remove-room">Eliminar sala</a>
+			<input id="id" name="userID"hidden></input>
+		</form>
+		<a id="side-thing">Guardar cambios</a>
+	</nav>
+	
+	<div id="container">
+		<input id="name"></input>
+		<textarea id="comment"></textarea>
+	</div>
+		
+	<div id="grid-container" class="grid-container">
+	</div>
+	
+	<script type="module" src="/scripts/editTR.js"></script>
+    
+</body>
+</html>
+

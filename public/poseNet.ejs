@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8" />
+	<title>Exercises develop - Virknig</title>
+	
+	<link rel="stylesheet" href="./CSS-style/poseNet.css">
+	<link rel="stylesheet" href="./CSS-style/timer.css">
+	
+</head>
+<body>
+
+	<p id="id" hidden><%= id %></p>
+	<p id="TR" hidden><%= TR %></p>
+	
+	<nav id="top">
+		<a id="back">←</a>
+		
+		<p id="exercise_name"></p>
+		
+		<div class="container">
+			<button type="button" id="next_exercise_button">&nbsp;Sgte. ejercicio:<br></br></button>
+				
+			<img id="next_exercise_image" src="" width="50" height="50">
+			<form action="" id="form" method="post">
+				<button type="submit" id="start_button">Comenzar rutina</button>
+				<input id="userID" name="userID" hidden></input>
+				<input id="TRID" name="TRID" hidden></input>
+			</form>
+		</div>
+	</nav>
+
+	<svg id="validate_rep" width="600" height="480" viewBox="0 0 120 480">
+		<rect x="0" y="0" width="40" height="480" rx="20" ry="20" fill="#E1E1E1"></rect>
+	</svg>
+
+	<svg id="validate_rep_rectangle" width="600" height="480" viewBox="0 0 120 480">
+		<rect id="validate_rectangle" x="0" y="440" width="40" height="40" rx="20" ry="20" fill="#F1B617"></rect>
+	</svg>
+
+	
+	<div class="info-elements">
+		
+		<div class="rep-counter">
+			<p id="reps_label">Reps.</p>
+			<p id="counter_repetition">0</p>
+		</div>
+
+		<div class="timer-group">
+			<div class="timer minute">
+				<div class="hand"><span></span></div>
+				<div class="hand"><span></span></div>
+			</div>
+			<div class="timer second">
+				<div class="hand"><span></span></div>
+				<div class="hand"><span></span></div>
+			</div>
+			<div class="face">
+				<h2 id="work_state">Trabajo</h2>
+				<p id="lazy">00:00</p>  
+			</div>
+		</div>
+		
+		<div class="info-exercise">
+			<img id="exercise_img" src="">		
+		</div>
+	
+	</div>
+	
+	<!-- LIBRARIES -->
+	<script src="/scripts/lib/em.js"></script>
+	<script src="/scripts/lib/ml5.min.js"></script>
+	<script src="/scripts/lib/p5.min.js"></script>
+	<!-- Local scripts -->
+	<script type="module" src="/scripts/FBposeNet.js"></script>
+	<script src="/scripts/poseNet.js"></script>
+	
+</body>
+</html>
+

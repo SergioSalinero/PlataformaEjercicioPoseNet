@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en" >
+<head>
+	<meta charset="UTF-8">
+	<title>Eliminar cuenta - Virkning</title>
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/5.0.0/normalize.min.css">
+	<link rel="stylesheet" href="./CSS-style/userForm.css">
+
+</head>
+<body>
+
+	<p id="id" hidden><%= id %></p>
+	
+	<nav id="top">
+		<a id="back">←</a>
+		<p id="title">Eliminar cuenta</p>
+		<a></a>
+	</nav>
+
+	<form action="/remove_account" method="post" id="form">
+      
+        
+	<fieldset>
+		<legend>Introduzca su contraseña para eliminar la cuenta</legend>
+
+		<label for="password">Contraseña:</label>
+		<input type="password" id="password" name="password" required>
+		
+	<input id="userID" name="userID" hidden></input>
+		
+	</fieldset>       
+	
+		<button type="submit" id="rm-account">ELIMINAR CUENTA</button>
+	</form>
+	
+	<script type="module" src="/scripts/removeAccount.js"></script>
+</body>
+</html>
+

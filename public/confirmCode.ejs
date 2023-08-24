@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en" >
+<head>
+	<meta charset="UTF-8">
+	<title>Confirm code - Virkning</title>
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/5.0.0/normalize.min.css">
+	<link rel="stylesheet" href="./CSS-style/userForm.css">
+
+</head>
+<body>
+
+	<p id="id" hidden><%= id %></p>
+
+	<form action="" method="post" id="confirm-form">
+      
+	<h1>Estás a punto de hacer algo grande</h1>
+        
+	<fieldset>
+		<legend>Introduzca el código de confirmación</legend>          
+		<label for="code">Código de confirmación:</label>
+		<input type="number" id="code" name="code" min="0" required>
+		
+		<div id="error" class="error"></div>
+
+		<a id="resend" href="">Reenviar código</a>
+	</fieldset>        
+        	        	
+	<button type="submit" id="confirm-button">Confirmar</button>
+	</form>
+
+	<!-- SIGNUP.JS script. Custom signup page -->
+	<script type="module" src="/scripts/confirmCode.js"></script>
+
+</body>
+</html>
+

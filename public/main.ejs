@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8" />
+	<title>Main - Virkning</title>
+	<link rel="stylesheet" href="./CSS-style/main.css">
+</head>
+<body>
+    
+ 	<p id="id" hidden><%= id %></p>
+    
+	<nav id="top">
+		<p id="nickname"></p>
+		<p id="up-stadistics"></p>
+		<div>
+			<a id="users" href="" hidden>Usuarios</a>
+			<a id="options">☰</a>
+		</div>
+	</nav>
+	
+	<div id="toggle-div">
+		<a id="profile" href="">👤 &nbsp;Perfil</a>
+		<a>☎️ &nbsp;Contacto</a>
+		<a>📋️ &nbsp;Acerca de nosotros</a>
+		<hr></hr>
+		<a id="logout" href="">❌ &nbsp;Cerrar sesión</a>
+	</div>
+	
+	<div class="grid-container">
+		<a class="grid-item" id="build-routine" href="">CREAR MI PROPIA RUTINA</a>
+		<a class="grid-item" id="training-rooms">SALAS DE ENTRENAMIENTO</a>
+		<a class="grid-item" id="my-routines">MIS RUTINAS</a>
+		<a class="grid-item" id="my-stadistics">MIS ESTADÍSTICAS</a>
+	</div>
+	
+	<div id="stadistics">
+		<div class="chart-style">
+			<p id="ranking-title">RANKING DE ACTIVIDAD</p>
+		</div>
+		<table id="myTable"></table>
+	</div>
+
+	
+	<script type="module" src="/scripts/main.js"></script>
+	<script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    
+</body>
+</html>
+

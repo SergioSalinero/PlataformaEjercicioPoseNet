@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="UTF-8">
+	
+	<title>Construir rutina - Virkning</title>
+	
+	<link rel="stylesheet" href="./CSS-style/userForm.css">
+	<link rel="stylesheet" href="./CSS-style/makeRoutine.css">
+	  
+
+	<link id="u-theme-google-font" rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:100,100i,300,300i,400,400i,500,500i,700,700i,900,900i|Open+Sans:300,300i,400,400i,500,500i,600,600i,700,700i,800,800i">
+	<link id="u-page-google-font" rel="stylesheet" href="https://fonts.googleapis.com/css?family=Oswald:200,300,400,500,600,700|Encode+Sans+Semi+Condensed:100,200,300,400,500,600,700,800,900">
+</head>
+
+<body class="u-body" data-lang="es">
+
+	<p id="id" hidden><%= id %></p>
+	<p id="TR" hidden><%= TR %></p>
+	
+	<nav id="top">
+		<a id="back">←</a>
+		<p id="title">Crea tu propia rutina</p>
+		<a></a>
+	</nav>
+
+	<section class="section-style build_routine" id="build_routine">
+
+		<div class="div-control">
+			<div class="current-routine">
+				<div class="current-routine-div">
+					<h1 class="current-routine-h1">Rutina actual</h1>
+					<p id="current_routine" class="current-routine-p"></p>
+ 				</div>
+			</div>
+       
+       		<form id="routine-form" method="POST">
+				<a type="button" id="start-button" class="start_routine_button">Comenzar rutina</a>
+				<input id="userID" name="userID" hidden></input>
+				<input id="TRID" name="TRID" hidden></input>
+			</form>
+        
+			<div>
+				<div class="repeater" id="all_exercise_container">
+            
+					<div class="repeater-item" id="exercise_container">
+						<div class="iter-container">
+ 							<img id="exercise_image" src="" alt="" class="image" data-image-width="518" data-image-height="518">
+							<h4 id="exercise_type" class="exercise-name">Curl de biceps</h4>
+							<h3 id="num_rep" class="num-rep">0</h3>
+							<a id="add_rep_button_0" class="rep-button button-style button-2" target="_blank">+</a>
+							<a id="subtract_rep_button_0" class="rep-button button-style button-3" target="_blank">-</a>
+							<a id="sealing_exercise_0" class="sealing_exercise button-style button-3" target="_blank">Sellar ejercio</a>
+						</div>
+					</div>
+
+				</div>
+			</div>
+
+		</div>
+
+	</section>
+
+	<section class="add_rest_time" id="add_rest_time"></section>
+	<section class="exercise_section" id="exercise_develop"></section>
+
+	<!-- MAKEROUTINE.JS script. Custom make routine page -->
+	<script type="module" src="/scripts/makeRoutine.js"></script>
+
+</body>
+
+</html>

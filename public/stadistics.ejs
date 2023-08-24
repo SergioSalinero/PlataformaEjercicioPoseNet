@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8" />
+	<title>Salas de entrenamiento - Virkning</title>
+	<link rel="stylesheet" href="./CSS-style/trainingRooms.css">
+</head>
+<body>
+    
+ 	<p id="id" hidden><%= id %></p>
+    
+	<nav id="top2">
+		<a id="back">←</a>
+		<p id="stadistic-title">ESTADÍSTICAS</p>
+	</nav>
+	
+	<div id="C0">
+		<div class="chart-style">
+			<select id="stadistic-change-C0">
+				<option value="month">Por mes</option>
+				<option value="week">Por semana</option>
+			</select>
+			<p class="title-stadistics">RUTINAS REALIZADAS</p>
+		</div>
+		<canvas id="canvas0"></canvas>
+	</div>
+		
+	<div id="C1">
+		<div class="chart-style">
+			<select id="stadistic-change-C1">
+				<option value="month">Por mes</option>
+				<option value="week">Por semana</option>
+			</select>
+			<p class="title-stadistics">CALORÍAS QUEMADAS</p>
+		</div>
+		<canvas id="canvas1"></canvas>
+	</div>
+	
+	<div id="C2">
+		<div class="chart-style">
+			<p class="title-stadistics">GRUPOS MUSCULARES</p>
+		</div>
+		<canvas id="canvas2" width="200" height="200"></canvas>
+	</div>
+	
+	<div id="C3">
+		<div class="chart-style">
+			<select id="stadistic-change-C3">
+				<option value="month">Por mes</option>
+				<option value="week">Por semana</option>
+			</select>
+			<p class="title-stadistics">TIEMPO ENTRENADO</p>
+		</div>
+		<canvas id="canvas3"></canvas>
+	</div>
+	
+	<script type="module" src="/scripts/stadistics.js"></script>
+	<script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    
+</body>
+</html>
+
