@@ -1,7 +1,7 @@
 # Physical Exercise Platform Based on Posture Detection
 Platform for physical exercise based on the use of posture estimation techniques.
 
-# Tabla de Contenidos
+# Table of Contents
 
     Description
     Features
