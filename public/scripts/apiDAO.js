@@ -44,13 +44,7 @@ import {
  * @memberof apiDAO
  */
 const firebaseConfig = {
-	apiKey: "AIzaSyAAVEZNFCkZLkWsXklG3pqUEnlb8zqdccs",
-	authDomain: "posenet-application.firebaseapp.com",
-	projectId: "posenet-application",
-	storageBucket: "posenet-application.appspot.com",
-	messagingSenderId: "987868618988",
-	appId: "1:987868618988:web:6e1f53ae39fb713dbf05c9",
-	measurementId: "G-84TMZ5MKMV"
+	
 };
 
 
